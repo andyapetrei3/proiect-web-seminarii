@@ -134,12 +134,14 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     overflow-x: auto;
 }
 table {
-    margin: 20px auto;
-    background-color: #ceadee;
-       
+ margin: 20px auto;
+ background-color: #ceadee;
+ border-collapse:collapse;
+ border: 2px solid black;    
 }
 th, td {
-    padding: 10px;
+padding: 10px;
+border: 2px solid black;
 }
 fieldset {
     background-color: #ede7f6;
