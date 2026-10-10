@@ -471,16 +471,17 @@
         <h2>Tabelul echipei</h2>
 
         <table>
+			
+         <!-- caption este titlul tabelului -->
             <caption>Membrii echipei Endpoint Eagles</caption>
-            <thead>
+		 <!-- tr creeaza un rand in tabel -->
                 <tr>
+		<!-- th creeaza o celula de antet pentru titlul unei coloane -->
                     <th>Nr.</th>
                     <th>Membru</th>
                     <th>An de studiu</th>
                     <th>Pasiune principala</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
                     <td>1</td>
                     <td>Mariabela Bradea Pintiuța</td>
@@ -505,13 +506,14 @@
                     <td>Anul III</td>
                     <td>Voluntariatul / Călătoritul </td>
                 </tr>
-            </tbody>
         </table>
     </section>
     <!-- progres echipa -->
     <section id="progres-echipa">
         <h2>Cât de bine lucrăm momentan împreună ca o echipa</h2>
         <p>
+	<!-- progress afiseaza o bara de progres
+     ,value este valoarea actuala iar max este valoarea maxima, deci aici bara arata 60%.-->
             <progress value="60" max="100">60%</progress>
         </p>
     </section>
@@ -522,9 +524,16 @@
 
             <!-- Vreau ca acest formular sa fie intr-o caseta -->
             <fieldset>
+				 <!-- legend este titlul grupului de campuri. -->
                 <legend>Trimite-ne un mesaj</legend>
 
                 <p>
+				<!-- label este textul care explica ce trebuie completat
+                 for="nume" il leaga de campul cu id="nume", daca apas pe text, se selecteaza campul. -->
+				 <!-- input creeaza un camp de completat, iar type="text" permite introducerea unui text.
+                 name este numele sub care se trimite valoarea completata,iar
+                 placeholder este indiciul afisat cand campul este gol
+                 si required cere completarea campului inainte de trimitere. -->
                     <label for="nume">Nume:</label>
                     <input type="text" id="nume" name="nume" placeholder="Numele tău" required>
                 </p>
@@ -535,6 +544,7 @@
                 </p>
 
                 <p>
+					<!-- textarea permite scrierea unui mesaj pe mai multe randuri.-->
                     <label for="mesaj">Mesaj:</label>
                     <textarea id="mesaj" name="mesaj" rows="5" cols="30" placeholder="Scrie mesajul tău aici..."
                         required></textarea>
@@ -571,7 +581,9 @@
 
     <!-- footer -->
     <footer>
+		    <!-- &copy afiseaza un simbol  iar b afiseaza textul ingrosat. -->
         <p>&copy; 2026 <b>Endpoint Eagles</b>. Toate drepturile rezervate.</p>
+		    <!-- &uarr afiseaza o sageata linkul cu #sus duce la elementul cu id="sus",la inceputul paginii. -->
         <p><a id="buton_final" href="#sus">&uarr; Înapoi sus</a></p>
         <br />
     </footer>
