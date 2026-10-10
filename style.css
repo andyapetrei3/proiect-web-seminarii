@@ -1,34 +1,48 @@
+/* body aplica aceste stiluri paginii. */
 body {
-  background-color: #d1e1f7;
-  color: #292333;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+    background-color: #d1e1f7;
+    color: #292333;
+    /* foloseste Arial,daca nu este disponibil alege un alt font din categoria sans-serif */
+    font-family: Arial, sans-serif;
+    /* dimensiunea textului, masurata in pixeli. */
+    font-size: 16px;
+    /* distanta dintre randuri este de 1.6 ori dimensiunea fontului. */
+    line-height: 1.6;
 }
+
+/* # selecteaza elementul care are acest id=sus */
 #sus {
     background-color: #594080;
     color: white;
     text-align: center;
+    /* spatiu in interiorul caseteiintre continut si margine */
     padding: 30px;
+    /* spatiu in exteriorul casetei */
     margin: 20px;
+    /* rotunjesc colturile */
     border-radius: 15px;
 }
+
+/*Selectam mai multe clase*/
 .mariabela,
 .medeea,
 .andrei,
 .bianca {
-   font-family: "Times New Roman", serif;
+    font-family: "Times New Roman", serif;
     font-style: italic;
 }
-/* Stil comun pentru cele patru boxuri */
+
+/* selectez toate elementele article din interiorul elementului cu id=despre */
 #despre article {
     padding: 25px;
     margin-bottom: 20px;
+
+    /* bordura are grosimea de 1 pixel, linie continua si culoarea pe care am specificat-o */
     border: 1px solid #d5cddd;
     border-radius: 15px;
 }
 
-/* Fundal diferit pentru fiecare persoană */
+/* aleg un fundal diferit pentru prezentarea fiecarei persoane. */
 .mariabela {
     background-color: #98c99c;
 }
@@ -44,55 +58,83 @@ body {
 .bianca {
     background-color: #c86cb0;
 }
+
 .navigare {
+    /* flex imi permite sa aranjez linkurile unul langa altul.*/
     display: flex;
+
+    /* grupez linkurile in centrul randului */
     justify-content: center;
+    /* daca nu incap pe un rand linkurile trec pe urmatorul */
     flex-wrap: wrap;
+
+    /* spatiul dintre linkuri */
     gap: 15px;
     padding: 20px;
 }
 
+/* selectez linkurile din meniul de navigare */
 .navigare a {
-  font-size: 20px;
+    font-size: 20px;
     background-color: #b279ec;
     color: white;
+    /* prima valoare este spatiul sus si jos iar a doua este spatiul in stanga si dreapta */
     padding: 12px 20px;
     border-radius: 10px;
+    /* scot sublinierea linkurilor */
     text-decoration: none;
 }
 
+/* cu hover aplicam stilurile cand mouse-ul este deasupra elementului */
 .navigare a:hover {
     background-color: #5f299d;
-    
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    /* Adaug o umbra deplasare orizontala 0, verticala 8px si estompare 16px,
+       rgba stabileste culoarea negru  0.2 inseamna opacitate de 20%. */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .poze-fsega {
+    /* caseta devine reperul pentru pozitionarea imaginilor din interior */
     position: relative;
     width: 400px;
+    /* caseta nu poate fi mai lata decat spatiul disponibil in elementul parinte */
     max-width: 100%;
+    /* pastrez raportul dintre latime si inaltime la 16 la 10 */
     aspect-ratio: 16 / 10;
+
+    /* las 20px sus si jos iar auto centreaza caseta pe orizontala */
     margin: 20px auto;
 }
 
 .poze-fsega img {
+    /* Pozitionez imaginile in acelasi loc, una peste alta. */
     position: absolute;
+    /* le asez in coltul din stanga sus al casetei. */
     top: 0;
     left: 0;
+    /* Fiecare imagine ocupa toata latimea si inaltimea casetei. */
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
     border-radius: 15px;
-    
+
 }
 
+/* selectez imaginea cu clasa poza-hover din interiorul casetei poze-fsega */
 .poze-fsega .poza-hover {
+    /* imaginea este complet transparenta la inceput */
     opacity: 0;
+    /* schimbarea opacitatii dureaza 2 secunde
+     ease face schimbarea sa inceapa si sa se termine treptat */
     transition: opacity 2s ease;
 }
 
+/* cand mouseu este deasupra casetei a doua imagine devine viizbila */
 .poze-fsega:hover .poza-hover {
     opacity: 1;
 }
+
 #link-fsega {
     text-align: center;
 }
@@ -103,46 +145,63 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .grup-persoane {
+    /* grid aranjeaza casetele pe randuri si coloane */
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* creez doua coloane egale  1fr este o parte din spatiul 
+        disponibil, iar minmax(0, 1fr) permite micsorarea coloanelor. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 20px;
     margin-bottom: 30px;
 }
 
 .caseta-persoana {
-    background: linear-gradient(135deg, #98c99c, #9dbfd8 , #b872d3, #c86cb0);
+    /* fundalul trece treptat prin aceste culori la 135 de grade. */
+    background: linear-gradient(135deg, #98c99c, #9dbfd8, #b872d3, #c86cb0);
     padding: 25px;
     border: 1px solid #d5cddd;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.caseta-persoana > h3,
-.caseta-persoana > h4 {
+/* > selecteaza doar titlurile aflate direct in caseta-persoana,
+   fara un alt element intre caseta si titlu */
+.caseta-persoana>h3,
+.caseta-persoana>h4 {
     margin-top: 0;
     font-size: 22px;
 }
 
 @media (max-width: 650px) {
+
+    /* @media = aplica o regula doar intr-o anumita situatie
+   max-width: 650px = cand latimea ferestrei este de 650px sau mai mica
+grid-template-columns: 1fr = foloseste o singura coloana, in loc de doua.*/
     .grup-persoane {
+        /* casetele se aseaza pe o singura coloana */
         grid-template-columns: 1fr;
     }
+
 }
 
 #tabel {
     margin: 20px;
-    overflow-x: auto;
 }
+
 table {
- margin: 20px auto;
- background-color: #ceadee;
- border-collapse:collapse;
- border: 2px solid black;    
+    margin: 20px auto;
+    background-color: #ceadee;
+    /* unesc bordurile celulelor vecine ca sa nu apara linii duble */
+    border-collapse: collapse;
+    border: 2px solid black;
 }
-th, td {
-padding: 10px;
-border: 2px solid black;
+
+/* aplic aceleasi stiluri celulelor de antet si celulelor cu date */
+th,
+td {
+    padding: 10px;
+    border: 2px solid black;
 }
+
 fieldset {
     background-color: #ede7f6;
     padding: 20px;
@@ -156,6 +215,7 @@ legend {
 }
 
 #buton_final {
+    /* linkul ramane in rand cu alte elemente dar permite dimensiuni si spatii ca o caseta */
     display: inline-block;
     font-size: 20px;
     background-color: #b279ec;
@@ -168,7 +228,9 @@ legend {
 footer {
     text-align: center;
 }
+
 h1 {
+    /* aleg dimensiunea pentru fiecare nivel de titlu*/
     font-size: 48px;
 }
 
@@ -179,15 +241,17 @@ h2 {
 h3 {
     font-size: 26px;
 }
+
 .social-media {
-  background-color: #d4afe7;
+    background-color: #d4afe7;
     color: white;
     text-align: center;
     padding: 30px;
     margin: 20px;
     border-radius: 15px;
-    
+
 }
+
 .social-media a {
     color: #5d073b;
 }
@@ -195,24 +259,31 @@ h3 {
 .social-media a:hover {
     color: #050338;
 }
+
 .titlu-social {
     font-weight: bold;
     color: black;
 }
+
 .parere {
     text-align: center;
 }
+
 .parere button {
     background-color: #b279ec;
     color: white;
     font-size: 20px;
     padding: 12px 25px;
+    /* scot bordura butonului */
     border: none;
     border-radius: 10px;
+    /* cursorul devine pointer cand este deasupra butonului */
     cursor: pointer;
+    /* miscarea dureaza 0.1 secunde si incetineste spre final */
     transition: transform 0.1s ease-out;
 }
 
 .nu:hover {
+    /* Cand mouse-ul ajunge pe butonul nu acesta se deplaseaza vizual cu 250px spre dreapta */
     transform: translateX(250px);
 }
