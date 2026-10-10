@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- Documentul este scris in HTML5 -->
+<html lang="ro">
+
+<head>
+        <!-- UTF-8 permite afisarea corectă a diacriticelor-->
+    <meta charset="UTF-8">
+        <!-- Pagina foloseste latimea ecranului dispozitivului si se deschide la scara normala -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titlul care apare in tab-ul browserului -->
+    <title>Endpoint Eagles - Echipa noastră</title>
+
+    <!-- iconita din tab - sus in browser -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%85%3C/text%3E%3C/svg%3E"
+        type="image/svg+xml">
+         <!-- formatul imaginii-->
+<!-- pagina externa de css unde am scris culorile dimensiunile si aranjarea elementelor-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <!-- Antetul paginii -->
+
+
+    <!-- Meniul de navigare -->
+    <nav class="navigare">
+
+        <!-- a e pt link-uri, href  duce/ia elementul din acea locatie, in cazul nav ma duce, deoarece e link intern -->
+        <a href="#despre">Despre noi</a>
+        <!--  trebuie # pt id, el e ca o ancora, duce unde vede cuvantul de dupa # -->
+        <a href="#studii">Studii / Experiență</a>
+        <a href="#hobby">Hobby-uri</a>
+        <a href="#tabel">Tabel</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <header id="sus">
+        <!--am pus id--ul ca sa ne putem intoarce de jos la inceputul site-ului-->
+        <h1>Endpoint Eagles</h1> <!--titlul principal -->
+        <p id="descriere">Echipa noastră de la FSEGA - Informatică Economică</p>
+    </header>
+
+    <section id="despre">
+        <h2>Despre noi</h2><!-- titlu secundar, al doilea ca si prioritate dupa  h1 -->
+        <!--Mariabela-->
+        <article class="mariabela">
+            <h3>Mariabela Bradea Pintiuța</h3> <!-- titlu mai putin important fata de h2 si decat h1 -->
+            <p>Sunt studentă la Facultatea de Științe Economice și Gestiunea Afacerilor
+                din Cluj-Napoca, în anul 3 la specializarea Informatică Economică.
+            </p>
+            <p>
+                Îmi place ziua să fiu contabilă și noaptea să scriu cod :) .
+
+            </p>
+
+            <figure>
+                <!-- figure tine impreuna imaginea si descrierea ei -->
+                <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t39.30808-6/391755334_1128394021519675_1292230892515598149_n.jpg?stp=dst-jpg_tt6&cstp=mx800x792&ctp=s800x792&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Y0lp21plZBYQ7kNvwHLwo_O&_nc_oc=AdoPtzkxn5kTobILIKQr-DcaosLFfZ_NA2vREl5Ky97IeWGGf_-VAfiGCGT5isKfQOk&_nc_zt=23&_nc_ht=scontent.fomr1-1.fna&_nc_gid=pbLbsEp_RYfj2vtniO8_0Q&_nc_ss=7c2a8&oh=00_AQNCELE5NaBTfHu1ZoypJZgWPFknQRHn14jgHmhhKti7ew&oe=6ACEC286"
+                    alt="Poză cu Mariabela" width="300">
+                <!-- img - inserez o imagine, src- de unde e imaginea aia. alt- text afisat in cazul in care nu se incarca imaginea -->
+                <figcaption>Poză cu Mariabela</figcaption>
+            </figure>
+
+            <aside> <!-- Continut secundar,informatie in plus (vizibil doar in cod) -->
+                <details> 
+                     <!-- details permite deschiderea si inchiderea unei bucati de continut prin apasare -->
+                    <summary><strong>Fun fact</strong></summary>
+                    <p>Îmi place să petrec timp cu familia și ador animalele.</p>
+                </details>
+            </aside>
+        </article>
+        <hr>
+
+        <!-- Medeea -->
+        <article class="medeea">
+            <h3>Medeea Cezara Chiuariu</h3>
+            <p>
+                Salut! Mă numesc Medeea și sunt în anul 3 la Facultatea de Științe Economice
+                și Gestiunea Afacerilor. Sunt din Suceava și de mică mi-a plăcut să desenez
+                și să-mi exprim creativitatea. M-a atras și tehnologia, așa că îmi doresc să
+                lucrez într-un domeniu în care să le îmbin. În timpul liber cânt la chitară
+                și ocazional mă uit la filme de groază. Îmi place ceaiul de mentă (specific
+                de la Twinings), iar anotimpul meu preferat este toamna. </p>
+
+            <figure>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQG7l2MZP6Syug/profile-displayphoto-crop_800_800/B4DZuDkjbMIkAI-/0/1767438957615?e=1793232000&v=beta&t=YcmWwp_PKUkSIX2a90kPZBxGYrNwFFpi7alEIovYB44"
+                    alt="Poză cu Medeea" width="300">
+                <figcaption>Poză cu Medeea</figcaption>
+            </figure>
+
+            <aside>
+                <details>
+                    <summary><strong>Fun fact</strong></summary>
+                    <p>
+                        Îmi place foarte mult să ies în natură și să mă plimb prin padure.
+
+                    </p>
+                </details>
+            </aside>
+        </article>
+
+        <hr>
+
+        <!-- Andrei -->
+        <article class="andrei">
+            <h3>Apetrei Andrei</h3>
+            <p>
+                Sunt o persoană creativă căreia îi place să încerce lucruri noi. Pasiunea
+                pentru investiții în acțiuni mă ține conectat la dinamica pieței, în timp
+                ce muzica, arta și jocurile video îmi oferă un echilibru perfect între
+                realitate și ficțiune. Îmi place să socializez și să ajut oamenii din jurul
+                meu; cred cu tărie că succesul se împarte și, de cele mai multe ori, ți-l
+                faci singur.
+            </p>
+
+            <figure>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQHOr5LD__qVCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731678620851?e=1793232000&v=beta&t=Ig-4QzWYyg89b1nhY90tctmJ2P3JDvEkALW-xdSQtwg"
+                    alt="Poză cu Andy" width="300">
+                <figcaption>Poză cu Andy</figcaption>
+            </figure>
+
+            <aside>
+                <details>
+                    <summary><strong>Fun fact</strong></summary>
+                    <p>
+                        Muzica și investițiile au un lucru comun: sunt pasiuni foarte scumpe.
+                        Și dacă nu aș fi făcut robotică, nu aș fi știut să-mi schimb singur
+                        pick-up-urile de la chitări. </p>
+                </details>
+            </aside>
+        </article>
+
+        <hr>
+        <!-- Bianca -->
+        <article class="bianca">
+            <h3>Stein Bianca Maria</h3>
+            <p>
+                Mă numesc Bianca Maria Stein și sunt studentă în anul al treilea la
+                Informatică Economică, în cadrul Facultății de Științe Economice și
+                Gestiunea Afacerilor (FSEGA). Îmi place să îmbin partea de informatică
+                cu cea economică și să descopăr cum tehnologia poate ajuta o afacere.
+                În afara facultății, practic echitația de trei ani, iubesc dansul și îmi
+                place să petrec timp de calitate alături de prieteni. Voluntariatul activ
+                este unul dintre lucrurile care mă definesc ca persoană. Îmi place să
+                ajut oamenii și să mă implic în cât mai multe activități care să mă
+                scoată din zona mea de confort.
+            </p>
+
+            <figure>
+                <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t39.30808-1/453718688_122102780114446899_8214422549889710572_n.jpg?stp=dst-jpg_tt6&cstp=mx1065x1065&ctp=s200x200&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=e99d92&_nc_ohc=8uH3ph6LiUwQ7kNvwEP22JV&_nc_oc=AdrfibUUZ3pY2zyr69CiPFfxzbQFuZGyffkhCRe9nsQaZxpkSVNZPpnaf8N8vuS9cng&_nc_zt=24&_nc_ht=scontent.fomr1-1.fna&_nc_gid=sXZqGbOhf2BpyumMoySrGw&_nc_ss=7b2a8&oh=00_AQM0evl9uF876RZZW4FjYvZEyslTwInwOJbpU7tGGdajsQ&oe=6ACD25C2"
+                    alt="Poză cu Bianca" width="300">
+                <figcaption>Poză cu Bianca</figcaption>
+            </figure>
+
+            <aside>
+                <details>
+                    <summary><strong>Fun fact</strong></summary>
+                    <p>
+                        Îmi place mult dansul, deși de ani buni nu am mai avut ocazia să-l
+                        practic și să mă dezvolt pe partea asta. Îmi doresc să mă reapuc
+                        de acest obicei și să dansez mai des. </p>
+                </details>
+            </aside>
+        </article>
+        <div class="poze-fsega">
+            <img src="https://scontent.fomr1-1.fna.fbcdn.net/v/t39.30808-6/662073617_1354022023439029_4811720638728025078_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=f4Po6kgDEHwQ7kNvwE4ERGC&_nc_oc=Adpmma4Q_Y9hmmAEoLRaGwMNYjMR1Bb_mNXUUibVmix8r5P8HYcvDwLVuYQMQ6YR7Qk&_nc_zt=23&_nc_ht=scontent.fomr1-1.fna&_nc_gid=AdVhAmiB0kjdFgOFOeexIQ&_nc_ss=7c2a8&oh=00_AQOQrbV66hKZAXYO_sOFZG9BvmVJ6bgx8BsbmN2rjhzMpA&oe=6ACEEF23"
+                alt="FSEGA">
+
+            <img class="poza-hover" src="https://econ.ubbcluj.ro/departamente/departamente/poze/DSCF1651.JPG"
+                alt="Clădirea FSEGA">
+        </div>
+        <p id="link-fsega">
+            Mai multe despre facultatea noastră găsești pe
+            <!--target=_blank  deschide intr-un tab nou -->
+            <a href="https://econ.ubbcluj.ro" target="_blank">Site-ul oficial FSEGA</a>.
+
+        </p>
+
+    </section>
+
+
+    <section id="studii">
+
+        <h2>Studii și experiență profesională</h2>
+        <h3>Studii</h3>
+
+        <div class="grup-persoane">
+            <div class="caseta-persoana">
+                <h4>Mariabela</h4>
+
+                <!-- Lista neordonata cu studiile urmate -->
+                <ul>
+                    <li> Școala Gimnazială nr 16 Oradea </li>
+
+                    <li> Liceul Teoretic Aurel Lazăr Oradea
+                        <ul>
+                            <li>Profil: Matematică Informatică promoția 2020-2024</li>
+                        </ul>
+                    </li>
+
+                    <li>Facultatea de Științe Economice și Gestiunea Afacerilor
+                        <ul>
+                            <li>specializare: Informatică Economică promoția 2024-2027</li>
+                        </ul>
+                    </li>
+                </ul><br>
+            </div>
+            <div class="caseta-persoana">
+                <h4>Medeea</h4>
+
+
+                <ul>
+                    <li> Școala Gimnazială nr 9 Suceava </li>
+
+                    <li> Colegiul Național "Petru Rareș" Suceava
+                        <ul>
+                            <li>profil: Matematică Informatică intensiv engleză promoția 2020-2024</li>
+                        </ul>
+                    </li>
+
+                    <li>Facultatea de Științe Economice și Gestiunea Afacerilor
+                        <ul>
+                            <li>specializare: Informatică Economică promoția 2024-2027</li>
+                        </ul>
+                    </li>
+                </ul><br>
+            </div>
+            <div class="caseta-persoana">
+                <h4>Andrei</h4>
+                <ul>
+
+
+                    <li> Colegiul National "Mihai Eminescu" Suceava
+                        <ul>
+                            <li>profil: Matematica Informatica promotia 2020-2024</li>
+                        </ul>
+                    </li>
+
+                    <li>Facultatea de Stiinte Economice si Gestiunea Afacerilor
+                        <ul>
+                            <li>specializare: Informatica Economica promotia 2024-2027</li>
+                        </ul>
+                    </li>
+                </ul><br>
+            </div>
+            <div class="caseta-persoana">
+                <h4>Bianca</h4>
+                <ul>
+
+
+                    <li> Liceul Teoretic "Aurel Lazăr" Oradea
+                        <ul>
+                            <li>profil: Matematică Informatică promoția 2020-2024</li>
+                        </ul>
+                    </li>
+
+                    <li>Facultatea de Științe Economice și Gestiunea Afacerilor
+                        <ul>
+                            <li>specializare: Informatică Economică promoția 2024-2027</li>
+                        </ul>
+                    </li>
+                </ul><br>
+            </div>
+
+        </div>
+
+        <h3>Experiența profesională</h3>
+        <div class="grup-persoane">
+            <div class="caseta-persoana">
+                <h4>Mariabela</h4>
+
+                <ol>
+                    <li>Contabilitate
+                        <ul>Internship
+                            <li> contabil intern în domeniul HORECA din iunie 2021 - iunie 2022</li>
+                        </ul>
+                        <ul>Job
+                            <li> contabil intern în domeniul HORECA din iunie 2022 - iunie 2024</li>
+                            <li> contabil extern din iunie 2025 - prezent</li>
+                        </ul>
+                    </li>
+
+                    <li>Proiecte de programare
+                        <ul>
+                            <li> Creare teste matematice pentru popularea bazei de date a unei aplicații educative
+                                pentru
+                                copiii din clasele 5-12
+                                <ul>
+                                    <li>limbaje folosite: Latex, Json</li>
+                                </ul>
+                            </li>
+                            <li> Atestat informatică - finalizare studii clasa a 12-a la profilul de Matematică
+                                Informatică
+                                <ul>
+                                    <li>limbaj folosit:HTML</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="caseta-persoana">
+                <h4>Andrei</h4>
+                <ol>
+                    <li>Activități extrașcolare
+                        <ul>
+                            <li>Robotică la Palatul Copiilor Suceava</li>
+                            <li>Fotbal la echipa Luceafărul Suceava</li>
+                        </ul>
+                    </li>
+
+                    <li>Certificări
+                        <ul>
+                            <li>Certificare Salesforce Business Analyst</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="caseta-persoana">
+                <h4>Medeea</h4>
+                <ol>
+                    <li>Internship
+                        <ul>
+                            <li>Internship în Social Media la WolfArt, cu durata de o lună</li>
+                        </ul>
+                    </li>
+
+                    <li>Voluntariat
+                        <ul>
+                            <li>Voluntar la COCP
+                                <ul>
+                                    <li>Coordonez Social Hub</li>
+                                </ul>
+                            </li>
+                            <li>Voluntar la Bucovina Ultra Rocks</li>
+                            <li>Voluntar în grupul de alergare TRIB Suceava</li>
+                            <li>Voluntar la Salvați Copiii filiala Suceava</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="caseta-persoana">
+                <h4>Bianca</h4>
+
+                <ol>
+                    <li>Voluntariat
+                        <ul>
+                            <li>Voluntar OSE – Echipa de Externe Educaționale</li>
+                            <li>Voluntar în cadrul ISU Crișana – SMURD</li>
+                            <li>Voluntar în departamentele de HR și Marketing și în echipa de logistică</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobby">
+        <h2>Hobby-uri</h2>
+        <div class="grup-persoane">
+            <div class="caseta-persoana">
+                <h3>Mariabela</h3>
+
+                <ul>
+                    <li>Îngrijirea animalelor
+                        <ul>
+                            <li>Îmi place să am grija de animale. ( mai mult să mă joc cu ele, dar sunt foarte atentă și
+                                la
+                                nevoile lor)</li>
+                            <li>Am o pisică, Athena care este o minune de pisic de 5 ani si 2 luni (are grijă să-l certe
+                                pe
+                                fratele meu când nu sunt eu acasa)</li>
+
+                        </ul>
+                    </li>
+
+                    <li>Grădinărit
+                        <ul>
+                            <li>Am o colecție mult prea mare de plante de camera pentru spațiul pe care-l am - cu scuza
+                                că
+                                imbunătățesc aerul din casa.</li>
+                        </ul>
+                    </li>
+
+                    <li>Gatit
+                        <ul>
+                            <li>Am început să gatesc deoarece ieșeam mai ieftin la final de lună, dar a ajuns să-mi
+                                placă:).
+                            </li>
+                        </ul>
+                    </li>
+                </ul><br>
+            </div>
+            <div class="caseta-persoana">
+                <h3>Medeea</h3>
+                <ul>
+                    <li>Alergatul
+                        <ul>
+                            <li>Tatăl meu mi-a inspirat pasiunea pentru alergat și este un exemplu pentru mine când vine
+                                vorba
+                                despre sport.</li>
+                            <li>El face parte din grupul de alergare TRIB Suceava, iar eu îl însoțesc de fiecare dată
+                                când am
+                                ocazia și ajut ca voluntar.</li>
+                        </ul>
+                    </li>
+
+                    <li>Drumețiile
+                        <ul>
+                            <li>Îmi place foarte mult să ies în natură și să mă plimb prin pădure.</li>
+                            <li>Îmi place să fac drumeții împreună cu prietenii de la facultate, iar pasiunea pentru
+                                acestea
+                                mi-a fost inspirată tot de tatăl meu.</li>
+                        </ul>
+                    </li>
+
+                    <li>Cântatul la chitară</li>
+
+                    <li>Cititul cărților </li>
+                    <li>Desenatul</li>
+                </ul>
+                <details>
+                    <summary>Care a fost drumeția mea preferată?</summary>
+                    <p>
+                        Drumeția mea preferată a fost pe Vârful Vlădeasa.
+                    </p>
+                </details>
+                <br>
+            </div>
+            <div class="caseta-persoana">
+                <h3>Andrei</h3>
+                <ul>
+                    <li>Chitară electrică</li>
+                    <li>Jocuri video</li>
+                    <li>Cântat vocal</li>
+                    <li>Investiții în acțiuni și ETF-uri</li>
+                </ul>
+
+                <details>
+                    <summary>Chitarile mele</summary>
+                    <ul>
+                        <li>Chitara electro-acustica Flame Neagra</li>
+                        <li>Squier Stratocaster Alb HSS cu pick-up-uri DiMarzio alnico 5</li>
+                        <li>Harley Benton Prs CST-24 Negru cu pick-up-uri Seymour Duncan Black Winter</li>
+                        <li>Harley Benton 7-string cu locking tuners si pick-up-uri Roswell Ruby Red</li>
+                    </ul>
+                </details>
+            </div>
+            <div class="caseta-persoana">
+                <h3>Bianca</h3>
+                <ul>
+                    <li>Echitație</li>
+                    <li>Voluntariat</li>
+                    <li>Călătoriile</li>
+                    <li>Dans</li>
+                    <li>Vizionarea filmelor romantice</li>
+                    <li>Timp petrecut cu prietenii</li>
+
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- tabel -->
+    <section id="tabel">
+        <h2>Tabelul echipei</h2>
+
+        <table border="2">
+            <caption>Membrii echipei Endpoint Eagles</caption>
+            <thead>
+                <tr>
+                    <th>Nr.</th>
+                    <th>Membru</th>
+                    <th>An de studiu</th>
+                    <th>Pasiune principala</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mariabela Bradea Pintiuța</td>
+                    <td>Anul III</td>
+                    <td>Contabilitate / Programare</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Medeea Cezara Chiuariu</td>
+                    <td>Anul III</td>
+                    <td>Alergat / Drumetii</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Apetrei Andrei</td>
+                    <td>Anul III</td>
+                    <td>Chitara electrica</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Stein Bianca Maria</td>
+                    <td>Anul III</td>
+                    <td>Voluntariatul / Călătoritul </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- progres echipa -->
+    <section id="progres-echipa">
+        <h2>Cât de bine lucrăm momentan împreună ca o echipa</h2>
+        <p>
+            <progress value="60" max="100">60%</progress>
+        </p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <!-- Formular pentru trimiterea unui mesaj -->
+        <form action="#" method="post">
+
+            <!-- Vreau ca acest formular sa fie intr-o caseta -->
+            <fieldset>
+                <legend>Trimite-ne un mesaj</legend>
+
+                <p>
+                    <label for="nume">Nume:</label>
+                    <input type="text" id="nume" name="nume" placeholder="Numele tău" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Emailul tău" required>
+                </p>
+
+                <p>
+                    <label for="mesaj">Mesaj:</label>
+                    <textarea id="mesaj" name="mesaj" rows="5" cols="30" placeholder="Scrie mesajul tău aici..."
+                        required></textarea>
+                </p>
+
+                <input type="submit" value="Trimite">
+            </fieldset>
+        </form>
+
+    </section><br><br>
+    <div class="social-media">
+        <p class="titlu-social">Paginile de social media ale echipei</p>
+
+
+        <!--  link extern, daca utilizatorul apasa scrisul albastru de pe site, va iesi din pagina si va merge la adresa pe care
+				am specificat-o, se poate intoarce daca apasa pe sageata inapoi -->
+
+        <a href="https://www.facebook.com/share/1DGA4dKZAz/" target="_blank"> Pagina de facebook a Mariabelei </a><br>
+        <a href="https://www.facebook.com/chiuariu.medeea" target="_blank">Pagina de facebook a Medeei </a><br>
+        <a href="https://www.instagram.com/biancaa.stein?xtok=MTB3cm8wY3BhZ2pobw%3D%3D&utm_source=qr"
+            target="_blank">Pagina de instagram a lui Andrei </a><br>
+        <a href="https://www.instagram.com/biancaa.stein?xtok=MTB3cm8wY3BhZ2pobw%3D%3D&utm_source=qr"
+            target="_blank">Pagina de instagram a Biancăi </a>
+
+
+    </div>
+    <br><br>
+    <div class="parere">
+        <p>Vă place site-ul nostru?</p>
+        <button type="button">Da</button>
+        <button type="button" class="nu">Nu</button>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2026 <b>Endpoint Eagles</b>. Toate drepturile rezervate.</p>
+        <p><a id="buton_final" href="#sus">&uarr; Înapoi sus</a></p>
+    </footer>
+
+</body>
+
+</html>
