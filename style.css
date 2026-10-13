@@ -10,9 +10,13 @@ body {
     line-height: 1.6;
 }
 
+:root {
+    --culoare-mov: #594080;
+}
+
 /* # selecteaza elementul care are acest id=sus */
 #sus {
-    background-color: #594080;
+    background-color: var(--culoare-mov);
     color: white;
     text-align: center;
     /* spatiu in interiorul caseteiintre continut si margine */
@@ -21,6 +25,8 @@ body {
     margin: 20px;
     /* rotunjesc colturile */
     border-radius: 15px;
+    /*d, umbra reapta,jos,estompare,opacitate*/
+    text-shadow: 20px 15px 16px rgba(45, 193, 213, 0.5);
 }
 
 /*Selectam mai multe clase*/
@@ -71,6 +77,18 @@ body {
     /* spatiul dintre linkuri */
     gap: 15px;
     padding: 20px;
+    /* meniul ramane vizibil cand derulam pagina */
+    position: sticky;
+    /* meniul se lipeste de partea de sus a ferestrei */
+    top: 0;
+
+    /* pun z-index ca meniul sa ramana deasupra pozelor cu position: absolute,
+   ca altfel  trece peste el cand derulam pagina */
+    z-index: 10;
+
+    /* pun un fundal ca sa nu se vada continutul prin meniu */
+    background-color: #d1e1f7;
+
 }
 
 /* selectez linkurile din meniul de navigare */
@@ -83,6 +101,8 @@ body {
     border-radius: 10px;
     /* scot sublinierea linkurilor */
     text-decoration: none;
+
+
 }
 
 /* cu hover aplicam stilurile cand mouse-ul este deasupra elementului */
@@ -92,6 +112,11 @@ body {
     /* Adaug o umbra deplasare orizontala 0, verticala 8px si estompare 16px,
        rgba stabileste culoarea negru  0.2 inseamna opacitate de 20%. */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.navigare a:active {
+    background-color: #11139a;
 }
 
 .poze-fsega {
@@ -205,12 +230,12 @@ td {
 fieldset {
     background-color: #ede7f6;
     padding: 20px;
-    border: 1px solid #594080;
+    border: 1px solid var(--culoare-mov);
     border-radius: 10px;
 }
 
 legend {
-    color: #594080;
+    color: var(--culoare-mov);
     font-weight: bold;
 }
 
@@ -223,6 +248,14 @@ legend {
     padding: 12px 20px;
     border-radius: 10px;
     text-decoration: none;
+}
+
+#buton_final:hover {
+    background-color: #5f299d;
+}
+
+#buton_final:active {
+    background-color: #11139a;
 }
 
 footer {
@@ -283,7 +316,34 @@ h3 {
     transition: transform 0.1s ease-out;
 }
 
+.parere button:active {
+    background-color: #11139a;
+}
+
 .nu:hover {
     /* Cand mouse-ul ajunge pe butonul nu acesta se deplaseaza vizual cu 250px spre dreapta */
     transform: translateX(250px);
+}
+
+.da:hover::after {
+    content: " — Mulțumim!";
+}
+
+/*animatia*/
+@keyframes aparitie {
+
+    /*  titlul e complet transparent */
+    from {
+        opacity: 0;
+    }
+
+    /* la final titlu evizibil */
+    to {
+        opacity: 1;
+    }
+}
+
+#sus h1 {
+    /* aplic animatia  */
+    animation: aparitie 6s ease;
 }
